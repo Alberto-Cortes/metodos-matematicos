@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=25mm,
+ top=20mm,
+ }
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\custvec}[1]{\left\langle#1\right\rangle}
+
+\title{Métodos Matemáticos}
+\author{Alberto Cortés González - A01635875}
+\date{Agosto 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Actividad 1}
+\begin{proof}
+$\norm{a\times b} = \norm{a}\norm{b}\sin\theta \\$
+A continuaciónn vamos a demostrar que la norma del resultado del producto cruz entre 2 vectores $a$ y $b$ es equivalente al producto entre la norma de cada uno de los vectores por el seno del ángulo entre ambos.\\
+
+Comenzamos elevando nuestro término de la izquierda al cuadrado, evaluamos el producto cruz y desarrollamos completamente los términos.
+\begin{equation*}
+    \begin{split}
+        \norm{a\times b}^2  &= (a_{2}b_{3} - a_{3}b_{2})^2 + (a_{3}b_{1} - a_{1}b_{3})^2 + (a_{1}b_{2} - a_{2}b_{1})^2\\
+        (a_{2}b_{3} - a_{3}b_{2})^2 &= (a_{2}b_{3})^2 - 2(a_{2}b_{2}a_{3}b_{3}) + (a_{3}b_{2})^2 \\
+        (a_{3}b_{1} - a_{1}b_{3})^2 &= (a_{3}b_{1})^2 - 2(a_{3}b_{1}a_{1}b_{3}) + (a_{1}b_{3})^2 \\
+        (a_{1}b_{2} - a_{2}b_{1})^2 &= (a_{1}b_{2})^2 - 2(a_{1}b_{2}a_{2}b_{1}) + (a_{2}b_{1})^2 \\
+        \norm{a\times b}^2  &= a_{2}^2b_{3}^2 - 2a_{2}b_{2}a_{3}b_{3} + a_{3}^2b_{2}^2 \\
+        &+ a_{3}^2b_{1}^2 - 2a_{1}b_{1}a_{3}b_{3} + a_{1}^2b_{3}^2 \\
+        &+ a_{1}^2b_{2}^2 - 2a_{1}b_{1}a_{2}b_{2} + a_{2}^2b_{1}^2 \\
+        &= a_{1}^2(b_{2}^2+b_{3}^2)+a_{2}^2(b_{1}^2+b_{3}^2)+a_{3}^2(b_{1}^2+b_{2}^2)\\
+        &- 2(a_{2}b_{2}a_{3}b_{3}+a_{1}b_{1}a_{3}b_{3}+a_{1}b_{1}a_{2}b_{2}) \\
+    \end{split}
+\end{equation*}
+
+Habiendo terminado ese desarrollo comenzamos uno nuevo, esta vez tomaremos el cuadrado de la norma de $a$ por el cuadrado de la norma de $b$ por el coseno cuadrado de teta. Esto siendo equivalente al cuadrado del pruducto punto entre ambos vectores y buscando llegar más adelante al lado derecho de nuestro plantemiento inicial.
+\begin{equation*}
+    \begin{split}
+            \norm{a}^2\norm{b}^2\cos^2\theta=(a\cdot b)^2   &= (a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3})^2\\
+                &= a_{1}^2b_{1}^2+a_{2}^2b_{2}^2+a_{3}^2b_{3}^2 \\
+                &+ 2(a_{1}b_{1}a_{2}b_{2}+a_{1}b_{1}a_{3}b_{3}+a_{2}b_{2}a_{3}b_{3}) \\
+    \end{split}
+\end{equation*}
+
+Ahora sumamos los resultados de los 2 desarrollos anteriores en la parte derecha de nuestra ecuación.
+\begin{equation*}
+    \begin{split}
+            \norm{a\times b}^2 + \norm{a}^2\norm{b}^2\cos^2\theta   &= a_{1}^2(b_{2}^2+b_{3}^2)+a_{2}^2(b_{1}^2+b_{3}^2)+ a_{3}^2(b_{1}^2+b_{2}^2) \\
+            &+ a_{1}^2b_{1}^2+a_{2}^2b_{2}^2+a_{3}^2b_{3}^2 \\
+            &= a_{1}^2(b_{1}^2+b_{2}^2+b_{3}^2)+a_{2}^2(b_{1}^2+b_{2}^2+b_{3}^2)+ a_{3}^2(b_{1}^2+b_{2}^2+b_{3}^2) \\
+            &= (a_{1}^2+a_{2}^2+a_{3}^2)(b_{1}^2+b_{2}^2+b_{3}^2) \\
+            &= \norm{a}^2\norm{b}^2
+    \end{split}
+\end{equation*}
+
+Finalmente restamos el segundo desarrollo a ambos lados y llegamos a lo que buscamos demostrar.\\
+\begin{equation*}
+    \begin{split}
+        \norm{a\times b}^2 &= \norm{a}^2\norm{b}^2 - \norm{a}^2\norm{b}^2\cos^2\theta \\
+        &= \norm{a}^2\norm{b}^2(1-\cos^2\theta) \\
+        &= \norm{a}^2\norm{b}^2\sin^2\theta \\
+        & \therefore \norm{a\times b} = \norm{a}\norm{b}\sin\theta 
+    \end{split}
+\end{equation*}
+\end{proof}
+\newpage
+\section{Actividad 2}
+Dados los vectores $\vec{a}=\custvec{1,1,0}$, $\vec{b}=\custvec{0,1,0}$ y $\vec{c}=\custvec{1,1,1}$ encuentraremos los vectores recíprocos para cada uno de estos.\\
+
+Comenzaremos por calcular $\vec{a}\cdot (\vec{b}\times \vec{c})$ pues este valor será utilizado a lo largo del cálculo de los 3 vectores recíprocos como el denominador de cada uno.\\
+\begin{equation*}
+    \begin{split}
+        (\vec{b}\times \vec{c}) &= \begin{vmatrix}
+        \hat{i} & \hat{j} & \hat{k} \\
+        0 & 1 & 0 \\
+        1 & 1 & 1
+        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,1}\\
+        \vec{a}\cdot (\vec{b}\times \vec{c}) &= \custvec{1,1,0} \cdot \custvec{1,0,-1} = 1
+    \end{split}
+\end{equation*}
+
+Teniendo este valor podemos seguir adelante y calcular el producto cruz respectivo para encontrar el vector recíproco de cada uno de nuestros vectores, comenzando por el vector $a$.\\
+\begin{equation*}
+    \begin{split}
+        \vec{a'} = \frac{(\vec{b}\times \vec{c})}{\vec{a}\cdot (\vec{b}\times \vec{c})} &= 1\cdot \begin{vmatrix}
+        \hat{i} & \hat{j} & \hat{k} \\
+        0 & 1 & 0 \\
+        1 & 1 & 1
+        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,1}\\
+        \vec{a}\cdot \vec{a'} &= \custvec{1,1,0}\cdot \custvec{1,0,-1} = 1 
+    \end{split}
+\end{equation*}
+
+Ahora calcularemos el vector recíproco de $b$.
+\begin{equation*}
+    \begin{split}
+        \vec{b'} = \frac{(\vec{c}\times \vec{a})}{\vec{a}\cdot (\vec{b}\times \vec{c})} &= 1\cdot \begin{vmatrix}
+        \hat{i} & \hat{j} & \hat{k} \\
+        1 & 1 & 1 \\
+        1 & 1 & 0
+        \end{vmatrix} = \hat{j} - \hat{i} = \custvec{-1,1,0}\\
+        \vec{b}\cdot \vec{b'} &= \custvec{0,1,0}\cdot \custvec{-1,1,0} = 1 
+    \end{split}
+\end{equation*}
+
+Finalmente calculamos el vector recíproco de $c$.
+\begin{equation*}
+    \begin{split}
+        \vec{c'} = \frac{(\vec{a}\times \vec{b})}{\vec{a}\cdot (\vec{b}\times \vec{c})} &= 1\cdot \begin{vmatrix}
+        \hat{i} & \hat{j} & \hat{k} \\
+        1 & 1 & 0 \\
+        0 & 1 & 1
+        \end{vmatrix} = \hat{i} - \hat{j} + \hat{k} = \custvec{1,-1,1}\\
+        \vec{c}\cdot \vec{c'} &= \custvec{1,1,1}\cdot \custvec{1,-1,1} = 1 
+    \end{split}
+\end{equation*}
+\newpage
+\section{Actividad 3}
+Evalua la siguiente suma con la delta de Kronecker.\\
+\begin{equation*}
+    \begin{split}
+       \sum\limits_{k=1}^{10} \delta_{i,k}\delta_{k,j}\quad(1\leq i,j \leq 10)\\
+    \end{split}
+\end{equation*}
+
+Algo que podemos notar es que en cada iteración de la sumatoria tendremos la multiplicación de ambas deltas, cada una con sus respectivos subíndices. Sabemos que cuando los índices del delta sean distintos este dará 0, siguiendo esto cualquier combinación de los 3 subíndices resultaría en uno de 4 casos, $0\cdot 0$, $0\cdot 1$, $1\cdot 0$ o $1\cdot1$, siendo este último el único que nos interesa.\\
+
+Notando que este último solo se da cuando $i=k$ y $k=j$, entonces necesitamos que $i=j=k$ para tener un valor distinto a 0, reduciendo las 1000 posibles combinaciones a solo 10 que aportan a la suma.\\
+\begin{equation*}
+    \begin{split}
+       \sum\limits_{k=1}^{10}\delta_{i,j}\quad (1\leq i,j \leq 10) = \sum\limits_{k=1}^{10}1 = 10\\
+    \end{split}
+\end{equation*}
+\newpage
+\section{Actividad 4}
+\end{document}
