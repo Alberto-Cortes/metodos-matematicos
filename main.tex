@@ -150,12 +150,74 @@ Descripción y demostración de las propiedades de la Delta de Kronecker y el S�
 \end{itemize}
 \newpage
 \section{Actividad 5}
-Para una partícula moviéndose en una orbita circular $\pmb{r} = \pmb{\hat{x}}r\cos\omega t + \pmb{\hat{y}}r\sin\omega t$:
+Para una partícula moviéndose en una orbita circular $\pmb{r} = r\cos(\omega t)\pmb{\hat{x}}+ r\sin(\omega t)\pmb{\hat{y}}$:
 \begin{enumerate}
-  \item Evalúa $\pmb{r}\times \pmb{\dot{r}}$, $\pmb{\dot{r}}$ siendo $= \frac{d\pmb{r}}{dt}=\pmb{v}$.
-  \item Muestra que $\pmb{\ddot{r}}+\omega^2 \pmb{r}=0$ con $\pmb{\ddot{r}}=\frac{d\pmb{v}}{dt}$. 
-  \begin{itemize}
-    \item El radio $\pmb{r}$ y la velocidad angular $\omega$ son constantes.
-  \end{itemize}
+  \item Evalúa $\pmb{r}\times \pmb{\dot{r}}$, $\pmb{\dot{r}}$ siendo $= \frac{d\pmb{r}}{dt}=\pmb{v}$.\\
+    Comenzamos por evaluar $\pmb{\dot{r}}$, derivando con respecto a $t$.
+    \begin{equation*}
+        \begin{split}
+           \pmb{\dot{r}}=\frac{d}{dt}r\cos(\omega t)\pmb{\hat{x}} + \frac{d}{dt}r\sin(\omega t)\pmb{\hat{y}}=-r\omega\sin(\omega t)\pmb{\hat{x}}+r\omega\cos(\omega t)\pmb{\hat{y}}=\pmb{v}
+        \end{split}
+    \end{equation*}
+    Seguido de esto evaluamos el producto cruz entre $\pmb{r}$ y $\pmb{\dot{r}}$, este al no estar definido en ${\rm I\!R}^2$ añadiremos una componente en $\pmb{\hat{z}}$ con valor de $0$ para ambos vectores.
+    \begin{equation*}
+         \begin{split}
+            \pmb{r}\times \pmb{\dot{r}}&= \begin{vmatrix}
+            \pmb{\hat{x}} & \pmb{\hat{y}} & \pmb{\hat{z}} \\
+            r\cos(\omega t) & r\sin(\omega t) & 0 \\
+            -r\omega\sin(\omega t) & r\omega\cos(\omega t) & 0
+            \end{vmatrix}\\
+            &=\pmb{\hat{x}}\begin{vmatrix}
+            r\sin(\omega t) & 0 \\
+            r\omega\cos(\omega t) & 0
+            \end{vmatrix}-\pmb{\hat{y}}\begin{vmatrix}
+            r\cos(\omega t) & 0\\
+            -r\omega\sin(\omega t) & 0
+            \end{vmatrix}+\pmb{\hat{z}}\begin{vmatrix}
+            r\cos(\omega t) & r\sin(\omega t)\\
+            -r\omega\sin(\omega t) & r\omega\cos(\omega t)
+            \end{vmatrix}\\
+            &=(r^2\omega\cos^2(\omega t) + r^2\omega\sin^2(\omega t))\pmb{\hat{z}}\\
+            &=(r^2\omega(\cos^2(\omega t)+\sin^2(\omega t)))\pmb{\hat{z}}\\
+            &=r^2\omega\pmb{\hat{z}}
+        \end{split}
+    \end{equation*}
+    \item Muestra que $\pmb{\ddot{r}}+\omega^2 \pmb{r}=0$ con $\pmb{\ddot{r}}=\frac{d\pmb{v}}{dt}$.\\
+    \begin{proof}
+    Partiremos suponiendo que  $\pmb{\ddot{r}}+\omega^2 \pmb{r}=0$.\\
+    Primero obtendremos $\pmb{\ddot{r}}$.
+    \begin{equation*}
+        \begin{split}
+            \pmb{\ddot{r}}&=\frac{d^2}{dt^2}r\cos(\omega t)\pmb{\hat{x}} + \frac{d^2}{dt^2}r\sin(\omega t)\pmb{\hat{y}}=-r\omega^2\cos(\omega t)\pmb{\hat{x}}-r\omega^2\sin(\omega t)\pmb{\hat{y}}\\
+            &=-\omega^2(r\cos(\omega t)\pmb{\hat{x}}+r\sin(\omega t)\pmb{\hat{y}})
+        \end{split}
+    \end{equation*}
+    Ahora que ya tenemos nuestro vector podemos realizar la suma igualada a $0$.
+    \begin{equation*}
+        \begin{split}
+            -\omega^2(r\cos(\omega t)\pmb{\hat{x}}+r\sin(\omega t)\pmb{\hat{y}})+\omega^2r=0\\
+            \omega^2r=\omega^2(r\cos(\omega t)\pmb{\hat{x}}+r\sin(\omega t)\pmb{\hat{y}})\\
+        \end{split}
+    \end{equation*}
+    Buscando igualar ambos lados obtendremos la norma de ellos.
+    \begin{equation*}
+        \begin{split}
+            \norm{\omega^2r}&=\norm{\omega^2}\norm{(r\cos(\omega t)\pmb{\hat{x}}+r\sin(\omega t)\pmb{\hat{y}})}\\
+            \omega^2r&=\omega^2\sqrt{r^2\cos^2(\omega t)+r^2\sin^2(\omega t)}\\
+            \omega^2r&=\omega^2\sqrt{r^2(\cos^2(\omega t)+\sin^2(\omega t))}\\
+            \omega^2r&=\omega^2\sqrt{r^2}\\
+            \omega^2r&=\omega^2r\\
+        \end{split}
+    \end{equation*}
+    Al ser esto cierto podemos asumir que nuestra suposición inicial era correcta.
+    \begin{equation*}
+        \begin{split}
+            \therefore \pmb{\ddot{r}}&+\omega^2 \pmb{r}=0
+        \end{split}
+    \end{equation*}
+    \end{proof}
+    \begin{itemize}
+        \item El radio $\pmb{r}$ y la velocidad angular $\omega$ son constantes.
+    \end{itemize}
 \end{enumerate}
 \end{document}
