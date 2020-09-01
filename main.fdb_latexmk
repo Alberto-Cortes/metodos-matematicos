@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1598781280 "c:/Code/GitHub/metodos-matematicos/main.xdv" "c:/Code/GitHub/metodos-matematicos/main.pdf" "c:/Code/GitHub/metodos-matematicos/main" 1598781282
-  "c:/Code/GitHub/metodos-matematicos/main.xdv" 1598781280 45496 999005e0c01e4a0dea530ba211e8cfae "xelatex"
+["xdvipdfmx"] 1598991637 "c:/Code/GitHub/metodos-matematicos/main.xdv" "c:/Code/GitHub/metodos-matematicos/main.pdf" "c:/Code/GitHub/metodos-matematicos/main" 1598991663
+  "c:/Code/GitHub/metodos-matematicos/main.xdv" 1598991637 45436 d8dc9eb6763ffa5f2fd82a5dc7466708 "xelatex"
   (generated)
   "c:/Code/GitHub/metodos-matematicos/main.pdf"
-["xelatex"] 1598781279 "c:/Code/GitHub/metodos-matematicos/main.tex" "c:/Code/GitHub/metodos-matematicos/main.xdv" "main" 1598781282
-  "c:/Code/GitHub/metodos-matematicos/main.aux" 1598781280 493 28353cf25ac580b9ae4673749189713d ""
-  "c:/Code/GitHub/metodos-matematicos/main.tex" 1598799044 10890 e9b54dc273c117556335fdb11b9f5117 ""
+["xelatex"] 1598991636 "c:/Code/GitHub/metodos-matematicos/main.tex" "c:/Code/GitHub/metodos-matematicos/main.xdv" "main" 1598991663
+  "c:/Code/GitHub/metodos-matematicos/main.aux" 1598991637 493 28353cf25ac580b9ae4673749189713d ""
+  "c:/Code/GitHub/metodos-matematicos/main.tex" 1598991662 10859 6a2bdccfdb6d11647700c2d953ed38b6 ""
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1585680893 1004 54797486969f23fa377b128694d548df ""
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1585680893 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1585680896 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -46,11 +46,11 @@
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf-dist/web2c/texmf.cnf" 1585680693 39451 6c50cbbc48279cc2d67f72e32ca48ad5 ""
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf-var/web2c/xetex/xelatex.fmt" 1585681424 3545759 4f82eab5f6f9e9f5d9b46e6d2abe75d6 ""
   "c:/Users/alber/AppData/Roaming/TinyTeX/texmf.cnf" 1585681502 892 9b551888449da12b2ef847e44059b8b7 ""
-  "main.aux" 1598781280 493 28353cf25ac580b9ae4673749189713d "xelatex"
-  "main.tex" 1598799044 10890 e9b54dc273c117556335fdb11b9f5117 ""
+  "main.aux" 1598991637 493 28353cf25ac580b9ae4673749189713d "xelatex"
+  "main.tex" 1598991662 10859 6a2bdccfdb6d11647700c2d953ed38b6 ""
   (generated)
   "c:/Code/GitHub/metodos-matematicos/main.xdv"
   "main.log"
   "main.aux"
-  "main.xdv"
   "c:/Code/GitHub/metodos-matematicos/main.log"
+  "main.xdv"

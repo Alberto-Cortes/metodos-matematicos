@@ -2,12 +2,12 @@
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
- \geometry{
- a4paper,
- total={170mm,257mm},
- left=25mm,
- top=20mm,
- }
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=25mm,
+top=20mm,
+}
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\custvec}[1]{\left\langle#1\right\rangle}
@@ -81,7 +81,7 @@ Comenzaremos por calcular $\vec{a}\cdot (\vec{b}\times \vec{c})$ pues este valor
         \hat{i} & \hat{j} & \hat{k} \\
         0 & 1 & 0 \\
         1 & 1 & 1
-        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,1}\\
+        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,-1}\\
         \vec{a}\cdot (\vec{b}\times \vec{c}) &= \custvec{1,1,0} \cdot \custvec{1,0,-1} = 1
     \end{split}
 \end{equation*}
@@ -115,10 +115,10 @@ Finalmente calculamos el vector recíproco de $c$.
     \begin{split}
         \vec{c'} = \frac{(\vec{a}\times \vec{b})}{\vec{a}\cdot (\vec{b}\times \vec{c})} &= 1\cdot \begin{vmatrix}
         \hat{i} & \hat{j} & \hat{k} \\
-        1 & 1 & 0 \\
-        0 & 1 & 1
-        \end{vmatrix} = \hat{i} - \hat{j} + \hat{k} = \custvec{1,-1,1}\\
-        \vec{c}\cdot \vec{c'} &= \custvec{1,1,1}\cdot \custvec{1,-1,1} = 1 
+        0 & 1 & 0 \\
+        1 & 1 & 1
+        \end{vmatrix} = \hat{k} = \custvec{0,0,1}\\
+        \vec{c}\cdot \vec{c'} &= \custvec{1,1,1}\cdot \custvec{0,0,1} = 1 
     \end{split}
 \end{equation*}
 \newpage
@@ -126,7 +126,7 @@ Finalmente calculamos el vector recíproco de $c$.
 Evalua la siguiente suma con la delta de Kronecker.\\
 \begin{equation*}
     \begin{split}
-       \sum\limits_{k=1}^{10} \delta_{i,k}\delta_{k,j}\quad(1\leq i,j \leq 10)\\
+        \sum\limits_{k=1}^{10} \delta_{i,k}\delta_{k,j}\quad(1\leq i,j \leq 10)\\
     \end{split}
 \end{equation*}
 Algo que podemos notar es que en cada iteración de la sumatoria tendremos la multiplicación de ambas deltas, cada una con sus respectivos subíndices. Sabemos que cuando los índices del delta sean distintos este dará 0, siguiendo esto cualquier combinación de los 3 subíndices resultaría en uno de 4 casos, $0\cdot 0$, $0\cdot 1$, $1\cdot 0$ o $1\cdot1$, siendo este último el único que nos interesa.\\
@@ -134,7 +134,7 @@ Algo que podemos notar es que en cada iteración de la sumatoria tendremos la mu
 Notando que este último solo se da cuando $i=k$ y $k=j$, entonces necesitamos que $i=j=k$ para tener un valor distinto a 0, reduciendo las 1000 posibles combinaciones a solo 10 que aportan a la suma.\\
 \begin{equation*}
     \begin{split}
-       \sum\limits_{k=1}^{10}\delta_{i,j}\quad (1\leq i,j \leq 10) = \sum\limits_{k=1}^{10}1 = 10\\
+        \sum\limits_{k=1}^{10}\delta_{i,j}\quad (1\leq i,j \leq 10) = \sum\limits_{k=1}^{10}1 = 10\\
     \end{split}
 \end{equation*}
 \newpage
@@ -152,16 +152,16 @@ Descripción y demostración de las propiedades de la Delta de Kronecker y el S�
 \section{Actividad 5}
 Para una partícula moviéndose en una orbita circular $\pmb{r} = r\cos(\omega t)\pmb{\hat{x}}+ r\sin(\omega t)\pmb{\hat{y}}$:
 \begin{enumerate}
-  \item Evalúa $\pmb{r}\times \pmb{\dot{r}}$, $\pmb{\dot{r}}$ siendo $= \frac{d\pmb{r}}{dt}=\pmb{v}$.\\
+\item Evalúa $\pmb{r}\times \pmb{\dot{r}}$, $\pmb{\dot{r}}$ siendo $= \frac{d\pmb{r}}{dt}=\pmb{v}$.\\
     Comenzamos por evaluar $\pmb{\dot{r}}$, derivando con respecto a $t$.
     \begin{equation*}
         \begin{split}
-           \pmb{\dot{r}}=\frac{d}{dt}r\cos(\omega t)\pmb{\hat{x}} + \frac{d}{dt}r\sin(\omega t)\pmb{\hat{y}}=-r\omega\sin(\omega t)\pmb{\hat{x}}+r\omega\cos(\omega t)\pmb{\hat{y}}=\pmb{v}
+        \pmb{\dot{r}}=\frac{d}{dt}r\cos(\omega t)\pmb{\hat{x}} + \frac{d}{dt}r\sin(\omega t)\pmb{\hat{y}}=-r\omega\sin(\omega t)\pmb{\hat{x}}+r\omega\cos(\omega t)\pmb{\hat{y}}=\pmb{v}
         \end{split}
     \end{equation*}
     Seguido de esto evaluamos el producto cruz entre $\pmb{r}$ y $\pmb{\dot{r}}$, este al no estar definido en ${\rm I\!R}^2$ añadiremos una componente en $\pmb{\hat{z}}$ con valor de $0$ para ambos vectores.
     \begin{equation*}
-         \begin{split}
+        \begin{split}
             \pmb{r}\times \pmb{\dot{r}}&= \begin{vmatrix}
             \pmb{\hat{x}} & \pmb{\hat{y}} & \pmb{\hat{z}} \\
             r\cos(\omega t) & r\sin(\omega t) & 0 \\
