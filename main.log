@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  1 SEP 2020 15:20
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  2 SEP 2020 02:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -244,7 +244,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--187
 
  []
 
-[5] (c:/Code/GitHub/metodos-matematicos/main.aux) ) 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+[6] (c:/Code/GitHub/metodos-matematicos/main.aux) ) 
 Here is how much of TeX's memory you used:
  2209 strings out of 481765
  30949 string characters out of 5934542
@@ -254,4 +269,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  30i,26n,31p,447b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on c:/Code/GitHub/metodos-matematicos/main.xdv (5 pages, 45436 bytes).
+Output written on c:/Code/GitHub/metodos-matematicos/main.xdv (6 pages, 55040 bytes).

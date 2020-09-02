@@ -220,4 +220,75 @@ Para una partícula moviéndose en una orbita circular $\pmb{r} = r\cos(\omega t
         \item El radio $\pmb{r}$ y la velocidad angular $\omega$ son constantes.
     \end{itemize}
 \end{enumerate}
+\newpage
+\section{Actividad 6}
+Calcula la curvatura de $r(t)=\custvec{t^2,\sin (t) - t\cos (t), \cos (t) + t\sin (t)}$, donde $t > 0$.\\
+
+Para obtener la curvatura usaremos el teorema que dicta lo siguiente:\\
+\begin{equation*}
+    \kappa(t) = \frac{|T'|}{|r'|}=\frac{|r' \times r''|}{|r'|^3}
+\end{equation*}
+
+Lo primero que haremos será obtener tanto $r'$ como $r''$, pues calcularemos la curvatura a partir de estas.\\
+\begin{equation*}
+    \begin{split}
+        \frac{d}{dt}r=r'&=\custvec{\frac{d}{dt}t^2,\frac{d}{dt}(\sin (t) - t\cos (t)),\frac{d}{dt}(\cos (t) + t\sin (t))}\\
+        &=\custvec{2t, t\sin (t), t\cos (t)}\\ \\
+        \frac{d^2}{dt^2}r=r''&=\custvec{\frac{d^2}{dt^2}t^2,\frac{d^2}{dt^2}(\sin (t) - t\cos (t)),\frac{d^2}{dt^2}(\cos (t) + t\sin (t))}\\
+        &=\custvec{2, t\cos (t) + \sin (t), \cos (t) - t\sin (t)}
+    \end{split}
+\end{equation*}
+
+Seguido de esto calculamos el numerador de nuestra ecuación antes de obtener su norma.
+\begin{equation*}
+    \begin{split}
+        r' \times r''&= \begin{vmatrix}
+                \hat{i} & \hat{j} & \hat{k} \\
+                2t & t\sin (t) & t\cos (t) \\
+                2 & t\cos (t) + \sin (t) & \cos (t) - t\sin (t)
+            \end{vmatrix}\\
+            &=\hat{i}\begin{vmatrix}
+                t\sin (t) & t\cos (t) \\
+                t\cos (t) + \sin (t) & \cos (t) - t\sin (t)
+            \end{vmatrix}\\
+            &-\hat{j}\begin{vmatrix}
+                2t & t \cos (t) \\
+                2 & \cos (t)-t\sin (t)
+            \end{vmatrix}\\
+            &+\hat{k}\begin{vmatrix}
+                2t & t\sin (t) \\
+                2 & t\cos (t) + \sin (t)
+            \end{vmatrix} \\
+            &=-t^2\hat{i}+2t^2\sin (t)\hat{j}+2t^2\cos (t)\hat{k}
+    \end{split}
+\end{equation*}
+
+Ahora que ya lo tenemos podemos calcular su norma.
+\begin{equation*}
+    \begin{split}
+        \norm{r' \times r''}&=\norm{\custvec{-t^2,2t^2\sin (t), 2t^2\cos (t)}} \\
+        &=\sqrt{(-t^2)^2+(2t^2\sin  (t))^2+(2t^2\cos (t))^2} \\
+        &=\sqrt{t^4+4t^4\sin^2(t)+4t^4\cos^2(t)} \\
+        &=\sqrt{t^4+4t^4(\sin^2(t)+\cos^2(t))} \\
+        &=\sqrt{5t^4}=\sqrt{5}t^2
+    \end{split}
+\end{equation*}
+
+Una vez que obtuvimos el numerador encontraremos el denominador.
+\begin{equation*}
+    \begin{split}
+        \norm{r'}^3&=\norm{\custvec{2t, t\sin (t), t\cos (t)}}^3 \\
+        &=\sqrt{(2t)^2+(t\sin (t))^2+(t\cos (t))^2}^3 \\
+        &=\sqrt{4t^2+t^2\sin^2(t)+t^2\cos^2(t)}^3 \\
+        &=\sqrt{4t^2+t^2(\sin^2(t)+\cos^2(t))}^3 \\
+        &=\sqrt{5t^2}^3=5\sqrt{5}t^3
+    \end{split}
+\end{equation*}
+
+Finalmente resolvemos para obtener la curvatura.
+\begin{equation*}
+    \begin{split}
+        \kappa(t) = \frac{\sqrt{5}t^2}{5\sqrt{5}t^3} = \frac{1}{5t}
+    \end{split}
+\end{equation*}
 \end{document}
