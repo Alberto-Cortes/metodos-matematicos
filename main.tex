@@ -93,7 +93,7 @@ Teniendo este valor podemos seguir adelante y calcular el producto cruz respecti
         \hat{i} & \hat{j} & \hat{k} \\
         0 & 1 & 0 \\
         1 & 1 & 1
-        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,1}\\
+        \end{vmatrix} = \hat{i} - \hat{k} = \custvec{1,0,-1}\\
         \vec{a}\cdot \vec{a'} &= \custvec{1,1,0}\cdot \custvec{1,0,-1} = 1 
     \end{split}
 \end{equation*}
@@ -126,7 +126,7 @@ Finalmente calculamos el vector recíproco de $c$.
 Evalua la siguiente suma con la delta de Kronecker.\\
 \begin{equation*}
     \begin{split}
-        \sum\limits_{k=1}^{10} \delta_{i,k}\delta_{k,j}\quad(1\leq i,j \leq 10)\\
+        \sum\limits_{k=1}^{10} \delta_{i,k}\delta_{k,j}\quad(1\leqslant i,j \leqslant 10)\\
     \end{split}
 \end{equation*}
 Algo que podemos notar es que en cada iteración de la sumatoria tendremos la multiplicación de ambas deltas, cada una con sus respectivos subíndices. Sabemos que cuando los índices del delta sean distintos este dará 0, siguiendo esto cualquier combinación de los 3 subíndices resultaría en uno de 4 casos, $0\cdot 0$, $0\cdot 1$, $1\cdot 0$ o $1\cdot1$, siendo este último el único que nos interesa.\\
@@ -134,7 +134,7 @@ Algo que podemos notar es que en cada iteración de la sumatoria tendremos la mu
 Notando que este último solo se da cuando $i=k$ y $k=j$, entonces necesitamos que $i=j=k$ para tener un valor distinto a 0, reduciendo las 1000 posibles combinaciones a solo 10 que aportan a la suma.\\
 \begin{equation*}
     \begin{split}
-        \sum\limits_{k=1}^{10}\delta_{i,j}\quad (1\leq i,j \leq 10) = \sum\limits_{k=1}^{10}1 = 10\\
+        \sum\limits_{k=1}^{10}\delta_{i,j}\quad (1\leqslant i,j \leqslant 10) = \sum\limits_{k=1}^{10}1 = 10\\
     \end{split}
 \end{equation*}
 \newpage
@@ -290,5 +290,86 @@ Finalmente resolvemos para obtener la curvatura.
     \begin{split}
         \kappa(t) = \frac{\sqrt{5}t^2}{5\sqrt{5}t^3} = \frac{1}{5t}
     \end{split}
+\end{equation*}
+\newpage
+\section{Actividad 7}
+Determine el trabajo efectuado por el campo de fuerza $\pmb{F}(x,y)=x^2\pmb{\hat{i}}
+-xy\pmb{\hat{j}}$ cuando se mueve una partícula a lo largo del cuarto de
+circunferencia $\pmb{r}(t)=\cos(t)\pmb{\hat{i}}+\sin(t)\pmb{\hat{j}}, 
+0 \leqslant t \leqslant \frac{\pi}{2}.$\\
+
+Comenzamos por obtener la primera derivada de $\pmb{r}$, esta siendo $\pmb{r'}$.\\
+\begin{equation*}
+    \pmb{r'}=\frac{d}{dt}\pmb{r}=\frac{d}{dt}\cos(t)\pmb{\hat{i}}+\frac{d}{dt}\sin(t)
+    \pmb{\hat{j}}=-\sin(t)\pmb{\hat{i}}+\cos(t)\pmb{\hat{j}}
+\end{equation*}
+
+Posteriormente evaluamos este nuevo vector en el campo de fuerza.
+\begin{equation*}
+    \pmb{F}(\pmb{r}(t))=\cos^2(t)\pmb{\hat{i}}-\cos(t)\sin(t)\pmb{\hat{j}}
+\end{equation*}
+
+Siguiendo la definición de la integral de línea en campos vectoriales podemos realizar
+nuestro cálculo directamente.
+\begin{equation*}
+    \begin{split}
+        &\int_{C}\pmb{F}\cdot d\pmb{r}=\int_{a}^{b}\pmb{F}(\pmb{r}(t))\cdot \pmb{r'}
+    (t)dt =\int_{C}\pmb{F}\cdot\pmb{T}ds\\
+        &\int_{0}^{\frac{\pi}{2}}(\cos^2(t)\pmb{\hat{i}}-\cos(t)\sin(t)\pmb{\hat{j}})
+        \cdot(-\sin(t)\pmb{\hat{i}}+\cos(t)\pmb{\hat{j}})dt\\
+        &\int_{0}^{\frac{\pi}{2}}-2(\sin(t)\cos^2(t))dt \qquad\qquad u=\cos(t)\\
+        &\int_{0}^{\frac{\pi}{2}}-2u^2du=\frac{2}{3}u^3\Big|_{0}^{\frac{\pi}{2}}=0-\frac{2}{3}=-\frac{2}{3}
+    \end{split}
+\end{equation*}
+\newpage
+\section{Actividad 8}
+Si $\pmb{F}(x,y,z)=y^2\pmb{\hat{i}}+(2xy+e^{3z})\pmb{\hat{j}}+3ye^{3z}\pmb{\hat{k}}$, determine una función 
+$f(x,y,z)$ tal que $\nabla f(x,y,z) = \pmb{F}(x,y,z)$.\\
+
+Comenzamos separando nuestro campo en sus derivadas parciales correspondientes para cada variable $x,y,z$. 
+Asumiendo que es un campo conservativo estas se obtienen directamente como el término de cada dirección 
+$\pmb{\hat{i}},\pmb{\hat{j}},\pmb{\hat{k}}$, las llamaremos $P,Q,R$.
+\begin{equation*}
+    P=f_{x}(x,y,z)=xy^2 \qquad Q=f_{y}(x,y,z)=2xy+e^{3z} \qquad R=f_{z}(x,y,z)=3ye^{3z}
+\end{equation*}
+
+Una vez que tenemos esto podemos integrar cualquiera de las 3 respecto a la variable por la que fueron 
+derivadas parcialmente para comenzar a construir la función $f(x,y,z)$.
+
+\begin{equation*}
+    \int f_{x}(x,y,z)dx=f(x,y,z)=xy^2+g(y,z)
+\end{equation*}
+
+Se usa el término $g(x,y)$ de manera temporal y será despejado conforme igualemos más derivadas parciales.\\
+
+Primero derivamos $f(x,y,z)$ con respecto a $y$ para obtener $f_{y}(x,y,z)$ que es el mismo término que $Q$, a partir de esto
+podremos despejar para $g_{y}(y,z)$ e integrar obteniendo así el valor de $g(y,z)$.
+\begin{equation*}
+    \begin{split}
+        f_{y}(x,y,z)=2xy+g_{y}(y,z)&=2xy+e^{3z} \\
+        \therefore g_{y}(y,z)&=e^{3z} \\
+        \int g_{y}(y,z)dy&=\int e^{3z}dy\\
+        g(y,z)&=ye^{3z}+h(z)+K\\
+    \end{split}
+\end{equation*}
+
+Entonces, $f(x,y,z)$ queda en los siguientes términos actualizados.
+\begin{equation*}
+    f(x,y,z)=xy^2+ye^{3z}+h(z)+K
+\end{equation*}
+
+Luego de esto, derivamos $f(x,y,z)$ con respecto a $z$ y despejamos para encontrar $h'(z)$, seguido de esto integramos y obtenemos su valor.
+\begin{equation*}
+    \begin{split}
+        f_{z}(x,y,z)=3ye^{3z}+h'(z)&=3ye^{3z}\\
+        \therefore h'(z)&=0\\
+        \int h'(z)dz&=\int 0dz\\
+        h(z)&=L
+    \end{split}
+\end{equation*}
+
+Ahora que tenemos todos los términos sustituimos y reducimos ambos independientes $K$ y $L$ a una sola constante $K$, obteniendo así nuestra función potencial $f(x,y,z)$.
+\begin{equation*}
+    f(x,y,z)=xy^2+ye^{3z}+K+L=xy^2+ye^{3z}+K
 \end{equation*}
 \end{document}
