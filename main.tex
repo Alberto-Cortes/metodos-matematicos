@@ -142,11 +142,45 @@ Notando que este último solo se da cuando $i=k$ y $k=j$, entonces necesitamos q
 Descripción de las propiedades de la Delta de Kronecker y el Símbolo de Levi-Civita asó como su relación.
 \begin{itemize}
     \item $\epsilon_{ijk}=\epsilon_{jki}=\epsilon_{kij}$
+    \begin{itemize}
+        \item La primera propiedad del Símbolo de Levi-Civita dice que todas las permutaciones cíclicas 
+        de sus índices serán iguales, es decir, tendran el valor de 1.
+    \end{itemize}
     \item $\epsilon_{ijk}=-\epsilon_{ikj}$
+    \begin{itemize}
+        \item La segunda propiedad dice que una permutación cíclica de los índices es igual el negativo 
+        de una permutación anticíclica. Esto siendo verdadero puesto que $1=-(-1)$.
+    \end{itemize}
     \item $\epsilon_{ijk}\epsilon_{imn}=\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km}$
+    \begin{itemize}
+        \item La tercera propiedad surge de expresar el producto entre dos $\epsilon$ que cuentan con un
+        índice repetido como el determinante de una matriz con la combinatoria de índices para $\delta$, obteniendo el determinante
+        como resultado del producto y reduciendo algebraicamente es que llegamos a este resultado.
+    \end{itemize}
     \item $\epsilon_{ijk}\epsilon_{ijn}=2\delta_{kn}$
+    \begin{itemize}
+        \item La cuarta propiedad surge del producto de dos símbolos de $\epsilon$ que comparten dos de sus índices,
+        en este caso observando que tendremos más términos similares y es por eso que la reducción será mayor, llegando
+        a un solo término.
+    \end{itemize}
     \item $\epsilon_{ijk}\epsilon_{ijk}=6$
-    \item $\epsilon_{ijk}=\frac{1}{2}(i-j)(j-k)(k-a)$, para $(i,j,k)=1,2,3$
+    \begin{itemize}
+        \item La quinta propiedad sigue los pasos de las 2 anteriores, ahora siendo el producto de dos $\epsilon$ que comparten
+        sus tres índices, reduciendo a un único término $2\delta_{ii}$ con $\delta_{ii}=3$ por definición, llegamos a un simple $2\cdot 3=6$.
+    \end{itemize}
+    \item $\epsilon_{ijk}=\frac{1}{2}(i-j)(j-k)(k-i)$, para $(i,j,k)=1,2,3$
+    \begin{itemize}
+        \item Finalmente tenemos la sexta propiedad, esta sirve para demostrar el valor de $1$ de la misma usando un caso de ejemplo con los
+        valores descritos para cada índice. Sustituyendo directemente en la ecuación tendríamos lo siguiente.\\
+        \begin{equation*}
+            \begin{split}
+                \epsilon_{ijk}&=\frac{1}{2}(1-2)(2-3)(3-1)\\
+                &=\frac{1}{2}(-1)(-1)(2)\\
+                &=\frac{1}{2}(1)(2)\\
+                &=1
+            \end{split}
+        \end{equation*}
+    \end{itemize}
 \end{itemize}
 \newpage
 \section{Actividad 5}

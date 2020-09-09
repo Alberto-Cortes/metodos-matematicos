@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  9 SEP 2020 08:46
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.31)  9 SEP 2020 15:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -239,54 +239,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 296--300
+Underfull \hbox (badness 10000) in paragraph at lines 330--334
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 326--328
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 [8] (c:/Code/GitHub/metodos-matematicos/main.aux) ) 
 Here is how much of TeX's memory you used:
- 2209 strings out of 481765
- 30949 string characters out of 5934542
+ 2212 strings out of 481765
+ 31031 string characters out of 5934542
  285716 words of memory out of 5000000
- 19231 multiletter control sequences out of 15000+600000
- 538730 words of font info for 56 fonts, out of 8000000 for 9000
+ 19232 multiletter control sequences out of 15000+600000
+ 538738 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  30i,26n,31p,447b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on c:/Code/GitHub/metodos-matematicos/main.xdv (8 pages, 74820 bytes).
+Output written on c:/Code/GitHub/metodos-matematicos/main.xdv (8 pages, 87784 bytes).
